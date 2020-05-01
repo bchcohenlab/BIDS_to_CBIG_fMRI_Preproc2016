@@ -27,8 +27,9 @@ config_name=`basename ${config_file} .config`
 
 # Run CBIG initialization script:
 BIDSPATH=${bids_dir}/code # path to scripts
-source ${BIDSPATH}/CBIG_caladan_config.sh
-
+if [ -f "${BIDSPATH}/CBIG_config.sh" ]; then
+	source ${BIDSPATH}/CBIG_config.sh
+fi
 
 # Create output directory:
 output_dir=${bids_dir}/derivatives/CBIG_fMRI_preprocess_${config_name}
