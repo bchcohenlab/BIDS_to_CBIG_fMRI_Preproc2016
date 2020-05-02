@@ -31,9 +31,15 @@ if [ -f "${BIDSPATH}/CBIG_config.sh" ]; then
 	source ${BIDSPATH}/CBIG_config.sh
 fi
 
-# Create output directory:
+# Create output directory, exit if participant_id subdir already exists (for now):
 output_dir=${bids_dir}/derivatives/CBIG_fMRI_preprocess_${config_name}
-mkdir -p ${output_dir}/${participant_id}
+if [ -d "${output_dir}/${participant_id}" ]; then
+	echo "It appears ${participant_id} has already been run with ${config_name}"
+	echo "delete the directory ${output_dir}/${participant_id} if you want to re-run"
+	exit 0
+else
+	mkdir -p ${output_dir}/${participant_id}
+fi
 
 # Make copy of config file:
 cp ${config_file} ${output_dir}
