@@ -39,9 +39,10 @@ pushd ${bids_dir}
 	#subject_list=`ls -d sub*`
 
 	ls -d sub* | \
-	parallel --dryrun \
+	parallel \
 	--max-args 1 \
 	-j ${number_of_threads} \
+	--delay 15 \
 	--sshlogin :,caladan \
 	"${script_to_run} ${bids_dir} {} ${script_arguments} \
 	> {}.log"
