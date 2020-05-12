@@ -43,6 +43,7 @@ pushd ${bids_dir}
 	--max-args 1 \
 	-j ${number_of_threads} \
 	--delay 15 \
+	--eta \
 	--sshlogin :,caladan \
 	"${script_to_run} ${bids_dir} {} ${script_arguments} \
 	> {}.log"

@@ -33,7 +33,7 @@ fi
 
 # Create output directory, exit if participant_id output bold file already exists (for now):
 output_dir=${bids_dir}/derivatives/CBIG_fMRI_preprocess_${config_name}
-if [ -f ${output_dir}/${participant_id}/vol/sub*gz ]; then
+if ls ${output_dir}/${participant_id}/vol/sub*gz 1> /dev/null 2>&1; then
 	echo "It appears ${participant_id} has already been run with ${config_name}"
 	echo "delete the outputs in ${output_dir}/${participant_id}/vol if you want to re-run"
 	exit 0
