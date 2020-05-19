@@ -3,6 +3,17 @@ This repository contains simple scripts for applying the CBIG pre-processing pip
 
 ## Usage:
 ```
+# Whole BIDS directory:
+BIDS_parallel.sh <num_of_threads_per_machine> BIDS_CBIG_fMRI_preprocess.sh <bids_dir> <config_file>
+
+/fileserver/caladan_ssd/repos/BIDS_to_CBIG_fMRI_Preproc2016/BIDS_parallel.sh \
+    64 \
+    /fileserver/caladan_ssd/repos/BIDS_to_CBIG_fMRI_Preproc2016/BIDS_CBIG_fMRI_preprocess.sh \
+    /fileserver/corrin/collections/GSP \
+    /fileserver/caladan_ssd/repos/BIDS_to_CBIG_fMRI_Preproc2016/configs/Legacy.config
+
+
+# Single Subject:
 BIDS_CBIG_fMRI_preprocess.sh <bids_dir> <participant_id> <config_file>
 
 /fileserver/caladan_ssd/repos/BIDS_to_CBIG_fMRI_Preproc2016/BIDS_CBIG_fMRI_preprocess.sh \  
