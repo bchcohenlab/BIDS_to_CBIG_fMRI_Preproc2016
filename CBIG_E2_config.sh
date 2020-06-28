@@ -21,11 +21,11 @@ source ${FSLDIR}/etc/fslconf/fsl.sh
 # Load Specific Freesurfer version
 export FS_LICENSE=/programs/local/licenses/freesurfer/license.txt
 export SUBJECTS_DIR=/lab-share/Neuro-Cohen-e2/Public/projects/FS_default_subjects
-export FREESURFER_HOME=/lab-share/Neuro-Cohen-e2/Public/software/freesurfer
+export FREESURFER_HOME=/lab-share/Neuro-Cohen-e2/Public/software/freesurfer_v5.3.0
 source ${FREESURFER_HOME}/SetUpFreeSurfer.sh
 
 # PLEASE CHANGE: Please specify location of CBIG repository
-export CBIG_CODE_DIR=/lab-share/Neuro-Cohen-e2/Public/repos/Standalone_CBIG_fMRI_Preproc2016
+export CBIG_CODE_DIR=/lab-share/Neuro-Cohen-e2/Public/repos/CBIG
 
 # PLEASE CHANGE: define locations for these libraries
 ## Many of these identified on E2 using 'command --sbapp:L'
