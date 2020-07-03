@@ -87,3 +87,7 @@ CBIG_preproc_fMRI_preprocess.csh \
 	-output_d  ${output_dir} \
 	-config  ${config_file} \
 
+if ls ${output_dir}/${participant_id}/bold/0*/*gz 1> /dev/null 2>&1; then
+	echo "Cleaning up intermediate files for ${participant_id}"
+	rm -f ${output_dir}/${participant_id}/bold/0*/*gz
+fi
