@@ -50,7 +50,7 @@ cp ${config_file} ${output_dir}
 
 # Create fmrinii file from BIDS-formatted files:
 fmrinii_file=${output_dir}/${participant_id}/${participant_id}_bold.fmrinii
-ls -1 ${bids_dir}/${participant_id}/ses-baselineYear1Arm1/func/${participant_id}_*_bold.nii.gz | nl -w2 -n rz \
+ls -1 ${bids_dir}/${participant_id}/ses-baselineYear1Arm1/func/${participant_id}_*_bold.nii.gz | head -2 | nl -w2 -n rz \
 	> ${fmrinii_file}
 
 # Create slice timing file from BIDS-formatted json files:
