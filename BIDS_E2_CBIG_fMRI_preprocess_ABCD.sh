@@ -39,8 +39,8 @@ fi
 output_dir=${target_dir}/CBIG_fMRI_preprocess_${config_name}
 if ls ${output_dir}/${participant_id}/vol/sub*gz 1> /dev/null 2>&1; then
 	echo "It appears ${participant_id} has already been run with ${config_name}"
-	echo "delete the outputs in ${output_dir}/${participant_id}/vol if you want to re-run"
-	exit 0
+#	echo "delete the outputs in ${output_dir}/${participant_id}/vol if you want to re-run"
+#	exit 0
 else
 	mkdir -p ${output_dir}/${participant_id}
 fi
@@ -50,7 +50,7 @@ cp ${config_file} ${output_dir}
 
 # Create fmrinii file from BIDS-formatted files:
 fmrinii_file=${output_dir}/${participant_id}/${participant_id}_bold.fmrinii
-ls -1 ${bids_dir}/${participant_id}/ses-baselineYear1Arm1/func/${participant_id}_*_bold.nii.gz | head -2 | nl -w2 -n rz \
+ls -1 ${bids_dir}/${participant_id}/ses-baselineYear1Arm1/func/${participant_id}_*_bold.nii.gz | nl -w2 -n rz \
 	> ${fmrinii_file}
 
 # Create slice timing file from BIDS-formatted json files:
