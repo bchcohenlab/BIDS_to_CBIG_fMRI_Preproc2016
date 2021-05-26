@@ -46,7 +46,6 @@ pushd ${bids_dir}
 	-j ${number_of_threads} \
 	--delay 10 \
 	--eta \
-	--sshlogin :,caladan \
 	"${script_to_run} ${bids_dir} {} ${script_arguments} \
 	> {}.log"
 
