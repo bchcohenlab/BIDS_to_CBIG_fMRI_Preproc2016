@@ -29,9 +29,9 @@ BIDS_CBIG_fMRI_preprocess.sh <bids_dir> <participant_id> <config_file>
 - Requires git 2.x (due to use of -C option)
     - For Centos 7:
         ```
-        sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
+        sudo yum install -y https://repo.ius.io/ius-release-el7.rpm https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
         sudo yum install -y yum-plugin-replace
-        sudo yum replace -y git --replace-with git2u-all
+        sudo yum replace -y git --replace-with git224
         ```
 - Pipeline config files need all options for each step on a single line, not separated with slashes
 - Comments in pipeline config files need # marks as the first character of the line (no preceeding spaces)
