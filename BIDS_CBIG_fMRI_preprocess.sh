@@ -3,7 +3,7 @@
 
 
 if [ $# -lt 1 ] ; then
-	echo "Usage: $0 <bids_dir> <participant_id> <config_file>"
+		echo "Usage: $0 <bids_dir> <freesurfer_subject_dir> <target_dir> <participant_id> <config_file>"
 	echo "e.g. $0 /fileserver/corrin/connectome/GSP sub-001 /fileserver/corrin/connectome/GSP/code/FS_to_MNI.config"
 	echo "====================================="
 	echo ""
@@ -21,8 +21,10 @@ if [ $# -lt 1 ] ; then
 fi
 
 bids_dir=$1
-participant_id=$2
-config_file=$3
+freesurfer_dir=$2
+target_dir=$3
+participant_id=$4
+config_file=$5
 config_name=`basename ${config_file} .config`
 
 # Run CBIG initialization script:
@@ -34,7 +36,7 @@ else
 fi
 
 # Create output directory, exit if participant_id output bold file already exists (for now):
-output_dir=${bids_dir}/derivatives/CBIG_fMRI_preprocess_${config_name}
+output_dir=${target_dir}/CBIG_fMRI_preprocess_${config_name}
 if ls ${output_dir}/${participant_id}/vol/sub*gz 1> /dev/null 2>&1; then
 	echo "It appears ${participant_id} has already been run with ${config_name}"
 	echo "delete the outputs in ${output_dir}/${participant_id}/vol if you want to re-run"
@@ -67,7 +69,7 @@ else
 fi
 
 # Check for freesurfer output:
-freesurfer_dir=${bids_dir}/derivatives/freesurfer
+#freesurfer_dir=${bids_dir}/derivatives/freesurfer
 if [ -f "${freesurfer_dir}/${participant_id}/mri/brain.mgz" ]; then
 	echo "Found freesurfer output"
 
