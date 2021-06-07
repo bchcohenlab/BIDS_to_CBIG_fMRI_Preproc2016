@@ -1,4 +1,4 @@
-# BIDS_to_CBIG_fMRI_Preproc2016
+# The "BIDS to CBIG_fMRI_Preproc2016" Wrapper script
 This repository contains simple scripts for applying the CBIG pre-processing pipeline (https://github.com/ThomasYeoLab/Standalone_CBIG_fMRI_Preproc2016) to a BIDS-formatted directory
 
 ## Usage:
