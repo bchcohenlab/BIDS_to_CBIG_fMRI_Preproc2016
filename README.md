@@ -1,6 +1,8 @@
 # The "BIDS to CBIG_fMRI_Preproc2016" Wrapper script
 This repository contains simple scripts for applying the CBIG pre-processing pipeline (https://github.com/ThomasYeoLab/Standalone_CBIG_fMRI_Preproc2016) to a BIDS-formatted directory
 
+[![DOI](https://zenodo.org/badge/260431820.svg)](https://zenodo.org/badge/latestdoi/260431820)
+
 ## Usage:
 ```
 # Whole BIDS directory:
