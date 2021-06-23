@@ -49,7 +49,7 @@ source $SETUP_PATH
 # 	export MATLABROOT=/opt/matlab/current
 # MCR Setup
 #	export MCRROOT=${MATLABROOT}
-	export MCRROOT=/usr/lib/x86_64-linux-gnu:/opt/matlabmcr-2010a/v713/
+	export MCRROOT=/usr/lib/x86_64-linux-gnu:/opt/matlabmcr-2021a/v94/
 	LD_LIBRARY_PATH=.:${MCRROOT}/runtime/glnxa64 ;
 	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/bin/glnxa64 ;
 	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/sys/os/glnxa64;
