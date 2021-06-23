@@ -32,7 +32,7 @@ BIDSPATH=${bids_dir}/code # path to scripts
 if [ -f "${BIDSPATH}/CBIG_config.sh" ]; then
 	source ${BIDSPATH}/CBIG_config.sh
 else
-	source /fileserver/caladan_ssd/repos/BIDS_to_CBIG_fMRI_Preproc2016/CBIG_2BP_docker_config.sh
+	source /BIDS_to_CBIG_fMRI_Preproc2016/CBIG_2BP_docker_config.sh
 fi
 
 # Create output directory, exit if participant_id output bold file already exists (for now):
