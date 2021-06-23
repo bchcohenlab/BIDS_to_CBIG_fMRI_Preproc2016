@@ -16,7 +16,7 @@ export FS_LICENSE=${FREESURFER_HOME}/license.txt
 source ${FREESURFER_HOME}/SetUpFreeSurfer.sh
 
 # PLEASE CHANGE: Please specify location of CBIG repository
-export CBIG_CODE_DIR=/repos/CBIG_compiled
+export CBIG_CODE_DIR=/CBIG_compiled
 
 # PLEASE CHANGE: define locations for these libraries
 export FREESURFER_HOME=${FREESURFER_HOME}
