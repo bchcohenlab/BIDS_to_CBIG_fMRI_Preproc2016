@@ -24,7 +24,7 @@ export FREESURFER_HOME=${FREESURFER_HOME}
 export CBIG_SPM_DIR=/spm12
 export CBIG_AFNI_DIR=/opt/afni-latest
 export CBIG_ANTS_DIR=/opt/ants-2.2.0
-export CBIG_WB_DIR=${caladan_opt}/workbench
+export CBIG_WB_DIR=/workbench
 export CBIG_FSLDIR=/opt/fsl-5.0.10
 
 # DO NOT CHANGE: define locations for unit tests data and replication data
