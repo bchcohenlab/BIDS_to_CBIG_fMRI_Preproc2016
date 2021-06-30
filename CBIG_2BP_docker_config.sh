@@ -15,6 +15,11 @@ export SUBJECTS_DIR=${FREESURFER_HOME}/subjects
 export FS_LICENSE=${FREESURFER_HOME}/license.txt
 source ${FREESURFER_HOME}/SetUpFreeSurfer.sh
 
+if [ ! -e /freesurfer_input/fsaverage6/surf/lh.sphere.reg ]; then
+    ln -sf /opt/freesurfer-6.0.0/subjects/fsaverage6 /freesurfer_input/fsaverage6
+    ln -sf /opt/freesurfer-6.0.0/subjects/fsaverage5 /freesurfer_input/fsaverage5
+fi
+
 # PLEASE CHANGE: Please specify location of CBIG repository
 export CBIG_CODE_DIR=/CBIG_compiled-for-MCR
 
