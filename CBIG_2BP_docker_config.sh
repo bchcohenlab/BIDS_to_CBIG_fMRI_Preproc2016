@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 #
 
 # DO NOT CHANGE: This clears old freesurfer variables if they previously exists
@@ -10,8 +10,8 @@ fi
 export caladan_opt=/fileserver/caladan_ssd/opt
 
 # Load Specific Freesurfer version
-export SUBJECTS_DIR=/fileserver/caladan_ssd/temp/FS_default_subjects
 export FREESURFER_HOME=/opt/freesurfer-6.0.0
+export SUBJECTS_DIR=${FREESURFER_HOME}/subjects
 export FS_LICENSE=${FREESURFER_HOME}/license.txt
 source ${FREESURFER_HOME}/SetUpFreeSurfer.sh
 
