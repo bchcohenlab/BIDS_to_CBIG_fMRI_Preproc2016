@@ -20,8 +20,8 @@ export CBIG_CODE_DIR=/fileserver/caladan_ssd/repos/CBIG_compiled
 
 # PLEASE CHANGE: define locations for these libraries
 export FREESURFER_HOME=${FREESURFER_HOME}
-export CBIG_MATLAB_DIR=/opt/matlab/current
-export CBIG_SPM_DIR=${caladan_opt}/spm12
+# export CBIG_MATLAB_DIR=/opt/matlab/current
+export CBIG_SPM_DIR=/fileserver/gammu/projects/CBIG_docker
 export CBIG_AFNI_DIR=/home/ch186161/abin
 export CBIG_ANTS_DIR=${caladan_opt}/ANTs/install/bin
 export CBIG_WB_DIR=${caladan_opt}/workbench
