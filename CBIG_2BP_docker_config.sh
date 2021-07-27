@@ -3,7 +3,7 @@
 
 # DO NOT CHANGE: This clears old freesurfer variables if they previously exists
 if [ -n "$FREESURFER_HOME" ]; then
-	${FREESURFER_HOME}/bin/clear_fs_env.csh 
+	$FREESURFER_HOME/bin/clear_fs_env.csh 
 fi
 
 # 2BP Server software location
@@ -40,7 +40,7 @@ export CBIG_REPDATA_DIR=/mnt/eql/yeo1/CBIG_test_data/replication
 export CBIG_SCHEDULER_DIR=/apps/sysapps/TORQUE/bin
  
 # DO NOT CHANGE: set up your environment with the configurations above
-SETUP_PATH=${CBIG_CODE_DIR}/setup/CBIG_generic_setup.sh
+SETUP_PATH=$CBIG_CODE_DIR/setup/CBIG_generic_setup.sh
 source $SETUP_PATH
 
 # DO NOT CHANGE: set up temporary directory for MRIread from FS6.0 for CBIG 
@@ -48,7 +48,7 @@ source $SETUP_PATH
 #export TMPDIR=/tmpstore
 
 # Do NOT CHANGE: set up MATLABPATH so that MATLAB can find startup.m in our repo 
-# export MATLABPATH=${CBIG_CODE_DIR}/setup
+export MATLABPATH=$CBIG_CODE_DIR/setup
 
 # Matlab Setup
 # 	export MATLABROOT=/opt/matlab/current
