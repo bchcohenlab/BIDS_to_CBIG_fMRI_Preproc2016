@@ -48,7 +48,7 @@ source $SETUP_PATH
 #export TMPDIR=/tmpstore
 
 # Do NOT CHANGE: set up MATLABPATH so that MATLAB can find startup.m in our repo 
-#export MATLABPATH=$CBIG_CODE_DIR/setup
+export MATLABPATH=${CBIG_CODE_DIR}/setup
 
 # Matlab Setup
 # 	export MATLABROOT=/opt/matlab/current
