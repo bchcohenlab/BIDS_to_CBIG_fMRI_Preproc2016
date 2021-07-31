@@ -27,7 +27,7 @@ target_dir=$4
 config_file=$5
 config_name=`basename ${config_file} .config`
 
-#The following lines are taken from the 'setup_docker_CBIG.sh' script and inserted into this preprocessing script (currently being tested)
+# Next portion of code is from the setup_docker_CBIG.sh script. The setup script, as of writing, changes the links for compiled m files and copies large compiled m files from caladan over to the docker image
 
 cd /CBIG_compiled-for-MCR/stable_projects/preprocessing/CBIG_fMRI_Preproc2016/utilities
 rm CBIG_bandpass_vol CBIG_glm_regress_vol CBIG_bpss_by_regression CBIG_glm_regress_matrix \
@@ -49,7 +49,7 @@ cd
 cp /extra_files/{CBIG_preproc_censor_wrapper,CBIG_preproc_censor,CBIG_preproc_CensorQC,CBIG_preproc_QC_greyplot} \
 /CBIG_compiled-for-MCR/stable_projects/preprocessing/CBIG_fMRI_Preproc2016/utilities
 
-echo "Initial Setup Complete"
+echo "Compiled m file preparation complete"
 
 # Run CBIG initialization script:
 BIDSPATH=${bids_dir}/code # path to scripts
