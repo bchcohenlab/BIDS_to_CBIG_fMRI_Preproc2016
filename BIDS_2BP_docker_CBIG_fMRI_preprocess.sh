@@ -27,30 +27,6 @@ target_dir=$4
 config_file=$5
 config_name=`basename ${config_file} .config`
 
-# Next portion of code is from the setup_docker_CBIG.sh script. The setup script, as of writing, changes the links for compiled m files and copies large compiled m files from caladan over to the docke$
-
-cd /CBIG_compiled-for-MCR/stable_projects/preprocessing/CBIG_fMRI_Preproc2016/utilities
-rm CBIG_bandpass_vol CBIG_glm_regress_vol CBIG_bpss_by_regression CBIG_glm_regress_matrix \
-CBIG_preproc_censor_wrapper CBIG_preproc_censor CBIG_preproc_CensorQC CBIG_preproc_QC_greyplot
-
-ln -s /CBIG_compiled-for-MCR/utilities/matlab/filtering/CBIG_bandpass_vol \
-/CBIG_compiled-for-MCR/stable_projects/preprocessing/CBIG_fMRI_Preproc2016/utilities/CBIG_bandpass_vol
-
-ln -s /CBIG_compiled-for-MCR/utilities/matlab/filtering/CBIG_bpss_by_regression \
-/CBIG_compiled-for-MCR/stable_projects/preprocessing/CBIG_fMRI_Preproc2016/utilities/CBIG_bpss_by_regression
-
-ln -s /CBIG_compiled-for-MCR/utilities/matlab/stats/CBIG_glm_regress_matrix \
-/CBIG_compiled-for-MCR/stable_projects/preprocessing/CBIG_fMRI_Preproc2016/utilities/CBIG_glm_regress_matrix
-
-ln -s /CBIG_compiled-for-MCR/utilities/matlab/stats/CBIG_glm_regress_vol \
-/CBIG_compiled-for-MCR/stable_projects/preprocessing/CBIG_fMRI_Preproc2016/utilities/CBIG_glm_regress_vol
-
-cd
-cp /extra_files/{CBIG_preproc_censor_wrapper,CBIG_preproc_censor,CBIG_preproc_CensorQC,CBIG_preproc_QC_greyplot} \
-/CBIG_compiled-for-MCR/stable_projects/preprocessing/CBIG_fMRI_Preproc2016/utilities
-
-echo "Compiled m file preparation complete"
-
 # Run CBIG initialization script:
 BIDSPATH=${bids_dir}/code # path to scripts
 if [ -f "${BIDSPATH}/CBIG_config.sh" ]; then
