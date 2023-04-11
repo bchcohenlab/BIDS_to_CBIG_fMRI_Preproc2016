@@ -79,7 +79,7 @@ else
 fi
 
 
-/CBIG_compiled-for-MCR/stable_projects/preprocessing/CBIG_fMRI_Preproc2016/CBIG_preproc_fMRI_preprocess.csh \
+/CBIG/stable_projects/preprocessing/CBIG_fMRI_Preproc2016/CBIG_preproc_fMRI_preprocess.csh \
 	-s  ${participant_id} \
 	-fmrinii  ${fmrinii_file} \
 	-anat_s  ${participant_id} \
