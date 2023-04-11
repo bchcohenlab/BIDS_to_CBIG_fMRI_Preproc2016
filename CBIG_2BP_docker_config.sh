@@ -21,7 +21,7 @@ if [ ! -e /freesurfer_input/fsaverage6/surf/lh.sphere.reg ]; then
 fi
 
 # PLEASE CHANGE: Please specify location of CBIG repository
-export CBIG_CODE_DIR=/CBIG_compiled-for-MCR
+export CBIG_CODE_DIR=/CBIG
 
 # PLEASE CHANGE: define locations for these libraries
 export FREESURFER_HOME=${FREESURFER_HOME}
@@ -51,18 +51,18 @@ source $SETUP_PATH
 export MATLABPATH=${CBIG_CODE_DIR}/setup:/root/matlab
 
 # Matlab Setup
-# 	export MATLABROOT=/opt/matlab/current
+export MATLABROOT=/opt/matlab
 # MCR Setup
 #	export MCRROOT=${MATLABROOT}
-	export MCRROOT=/opt/matlabmcr-2021a/v910
-        LD_LIBRARY_PATH=.:${MCRROOT}/runtime/glnxa64 ;
-	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/bin/glnxa64 ;
-	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/sys/os/glnxa64;
-	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/sys/opengl/lib/glnxa64;
-	export LD_LIBRARY_PATH;
-	# Preload glibc_shim in case of RHEL7 variants
-  	test -e /usr/bin/ldd &&  ldd --version |  grep -q "(GNU libc) 2\.17" \
-	&& export LD_PRELOAD="${MCRROOT}/bin/glnxa64/glibc-2.17_shim.so"
+#	export MCRROOT=/opt/matlabmcr-2021a/v910
+#        LD_LIBRARY_PATH=.:${MCRROOT}/runtime/glnxa64 
+#	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/bin/glnxa64 ;
+#	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/sys/os/glnxa64;
+#	LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/sys/opengl/lib/glnxa64;
+#	export LD_LIBRARY_PATH;
+#	# Preload glibc_shim in case of RHEL7 variants
+ # 	test -e /usr/bin/ldd &&  ldd --version |  grep -q "(GNU libc) 2\.17" \
+#	&& export LD_PRELOAD="${MCRROOT}/bin/glnxa64/glibc-2.17_shim.so"
 
 # specified the default Python environment.
 # Please UNCOMMENT if you follow CBIG's set up for Python environments.
